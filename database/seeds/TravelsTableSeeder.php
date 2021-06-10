@@ -25,5 +25,6 @@ class TravelsTableSeeder extends Seeder
 
             $newTravel->save();
         }
+
     }
 }
