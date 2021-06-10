@@ -13,15 +13,17 @@ class TravelsTableSeeder extends Seeder
     public function run()
     {
         for ($i=0; $i < 20; $i++) { 
-            $newTraveller = new Travel();
+            $newTravel = new Travel();
             
-            $newTraveller->title = 'Grand Tour Giappone';
-            $newTraveller->days = rand(6, 20);
-            $newTraveller->description = 'Grand Tour Giappon per vedere tutte le meraviglie del paese del Sol Levante';
-            $newTraveller->nations = 'Giappone';
-            $newTraveller->price = rand(2000, 6000);
+            $newTravel->title = 'Grand Tour Giappone';
+            $newTravel->days = rand(6, 20);
+            $newTravel->description = 'Grand Tour Giappone per vedere tutte le meraviglie del paese del Sol Levante';
+            $newTravel->nations = 'Giappone';
+            $newTravel->price = rand(2000, 6000);
+            $newTravel->isFlightIncluded = rand(0, 1);
+            $newTravel->isConfirmed = rand(0, 1);
 
-            $newTraveller->save();
+            $newTravel->save();
         }
     }
 }
